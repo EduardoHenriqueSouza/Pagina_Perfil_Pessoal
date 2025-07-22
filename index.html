@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eduardo Henrique | Analista de suporte</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="dot"></span>
+            <strong>Eduardo Henrique</strong> <span class="bar">/</span> ANALISTA DE SUPORTE
+        </div>
+        <nav>
+            <a class="active" href="#">SOBRE MIM</a>
+            <a href="#">CURRÍCULO</a>
+            <a href="#">PROJETOS</a>
+            <a href="#">CONTATO</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+
+        <div class="background-split">
+            <div class="black-bg"></div>
+            <div class="white-bg"></div>
+        </div>
+
+        <div class="hero-content">
+
+            <div class="card">
+                <img src="src/Image.jpeg" alt="Maya Nunes" class="avatar" />
+                <h2>Eduardo <br /> Henrique</h2>
+                <p class="title">ANALISTA DE SUPORTE</p>
+                <div class="social-icons">
+                    <a href="https://github.com/EduardoHenriqueSouza"><img src="src/Github.png"></a>
+                    <a href="https://outlook.live.com/mail/0/"><img src="src/Outlook.png"></a>
+                    <a href="https://www.linkedin.com/in/eduardo-souza-bb7981168/"><img src="src/Linkedin.png"></a>
+                    <a href="https://www.instagram.com/dudu_souzaa/"><img src="src/Instagram.png"></a>
+                </div>
+            </div>
+
+
+            <div class="profile-info">
+                <h1>Olá</h1>
+                <h3>Meu perfil e meus projetos</h3>
+                <div class="buttons">
+                    <button id="btn-curriculo" class="btn-primary">CURRÍCULO</button>
+                    <button class="btn-primary"
+                        onclick="window.open('https://github.com/EduardoHenriqueSouza?tab=repositories', '_blank')">
+                        PROJETOS </a></button>
+                </div>
+                <p class="text">
+                    Trabalho atualmente como Analista de Suporte Pleno, sou formado em Análise e Desenvolvimento de Sistemas e estou em transição para a área
+                    de Desenvolvimento de Software, que é onde realmente me encontrei e tenho buscado crescer cada vez
+                    mais, estudando, praticando e criando projetos próprios.
+                </p>
+
+            </div>
+        </div>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="btn-fechar" class="close">&times;</span>
+            <iframe src="document/Currículo Eduardo Henrique de Souza.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Script que controla mostrar/esconder -->
+
+    <script>
+        const btnCurriculo = document.getElementById('btn-curriculo');
+        const modal = document.getElementById('modal');
+        const btnFechar = document.getElementById('btn-fechar');
+
+        btnCurriculo.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        });
+
+        btnFechar.addEventListener('click', () => {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
